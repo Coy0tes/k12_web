@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn"> get</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+
+    // 传参并指定回调执行函数为onBack
+    script.src = 'http://apis.juhe.cn/cook/query.php?menu=%E5%B0%8F%E7%82%92%E8%82%89&dtype=json&key=327de8f9e36fb2d260a70105181239a0&callback=onBack';
+    document.head.appendChild(script);
+
+
+
+    // 回调执行函数
+    function onBack(res) {
+        alert(JSON.stringify(res));
+    }
+
+</script>
+</html>

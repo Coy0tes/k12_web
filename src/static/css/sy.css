@@ -1,0 +1,20 @@
+/*@font-face{
+    font-family: "sy";
+    src:url(../font/SourceHanSansCN-Light_0.eot);
+    src:url(../font/SourceHanSansCN-Light_0.eot?#iefix) format('embedded-opentype'),
+    url(../font/SourceHanSansCN-Light_0.woff2) format('woff2'),
+    url(../font/SourceHanSansCN-Light_0.woff) format('woff'),
+    url(../font/SourceHanSansCN-Light_0.ttf) format('truetype'),
+    url(../font/SourceHanSansCN-Light_0.otf) format('opentype'),
+    url(../font/SourceHanSansCN-Light_0.svg) format('svg');
+    
+   font-weight: normal;
+    font-style: normal;
+  
+
+}
+.sy{
+    font-family: "sy" !important;
+    font-style: normal;
+
+}*/

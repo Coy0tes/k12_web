@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    td{
+      padding: 0 10px 0 10px;
+      height: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div>
+ <h2>演示如何打印当前页面的内容：</h2>  
+  
+<input type="button" value="打印预览" onclick="javascript:prn1_preview()">  
+  
+<input type="button" value="直接打印" onclick="javascript:prn1_print()">  
+  
+<input type="button" value="选择打印机" onclick="javascript:prn1_printA()">  
+  
+<!-- 将要打印的内容通过div赋值-->  
+<div id="printDiv">  
+Lodop打印测试Lodop打印测试  
+</div>  
+</body>
+<script language="javascript" type="text/javascript">  
+    var LODOP; //声明为全局变量  
+    //打印预览  
+    function prn1_preview() {  
+        CreateOneFormPage();  
+        LODOP.PREVIEW();  
+    }  
+    //直接打印  
+    function prn1_print() {  
+        CreateOneFormPage();  
+        LODOP.PRINT();  
+    }  
+    //选择打印机  
+    function prn1_printA() {  
+        CreateOneFormPage();  
+        LODOP.PRINTA();  
+    }  
+    function CreateOneFormPage(){  
+        LODOP=getLodop();  
+        LODOP.PRINT_INIT("Mysql更改密码的四种方法");  
+        LODOP.SET_PRINT_STYLE("FontSize",18);  
+        LODOP.SET_PRINT_STYLE("Bold",1);  
+        LODOP.ADD_PRINT_TEXT(50,231,260,39,"Mysql更改密码的四种方法");  
+        //参数100表示距离左侧100px;88表示距离顶部88px  
+        LODOP.ADD_PRINT_HTM(88,100,"80%","80%",document.getElementById("printDiv").innerHTML);  
+    }  
+</script>  
+
+  <script language="javascript" type="text/javascript" src="../static/Lodop/LodopFuncs.js"></script>  
+
+</html>
